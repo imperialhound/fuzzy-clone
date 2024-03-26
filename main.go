@@ -1,16 +1,21 @@
 package main
 
+import (
+	"fmt"
+
+	"github.com/imperialhound/fuzzy-clone/internal/config"
+)
+
 func main() {
-  // TODO(dpe): Get repo configuration file or environment variable
-  // Configs:
-  // token 
-  // public/private endpoints
-  // preferences
-  // paths
+  // Get fuzzy-cloner configuration file
+  conf, err := config.New()
+  if err != nil {
+    panic(err)
+  }
 
-  // TODO(dpe): Run root command
+  fmt.Println(conf)
 
-    // TODO(dpe): github fuzzy finder
+  // TODO(dpe): Fuzzy select source
 
-    // TODO(dpe): gitlab fuzz finder
+  // TODO(dpe): Fuzzy select repo
 }
